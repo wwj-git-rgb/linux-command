@@ -1,0 +1,448 @@
+# Instincts generated from https://github.com/wwj-git-rgb/linux-command
+# Generated: 2026-05-23T20:24:17.495Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: linux-command-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/linux-command
+---
+
+# Linux Command Commit Length
+
+## Action
+
+Keep commit messages concise (~29 characters)
+
+## Evidence
+
+- Average commit message length: 29 chars
+- Based on 100 commits
+
+---
+id: linux-command-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/linux-command
+---
+
+# Linux Command Naming Files
+
+## Action
+
+Use camelCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: camelCase
+
+---
+id: linux-command-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/linux-command
+---
+
+# Linux Command Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: linux-command-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/linux-command
+---
+
+# Linux Command Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: linux-command-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/linux-command
+---
+
+# Linux Command Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: linux-command-workflow-add-or-update-command-doc
+trigger: "when doing add or update command doc"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/linux-command
+---
+
+# Linux Command Workflow Add Or Update Command Doc
+
+## Action
+
+Follow the add-or-update-command-doc workflow:
+1. Create or update a markdown file in command/ (e.g., command/ufw.md, command/nstat.md, command/vi.md, command/pacman.md, command/losetup.md, command/atop.md, command/git.md, command/getcap.md)
+2. Update README.md to mention the new or updated command
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: command/*.md, README.md
+
+---
+id: linux-command-workflow-update-readme-and-contributors
+trigger: "when doing update readme and contributors"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/linux-command
+---
+
+# Linux Command Workflow Update Readme And Contributors
+
+## Action
+
+Follow the update-readme-and-contributors workflow:
+1. Edit README.md
+2. Edit template/contributors.ejs
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: README.md, template/contributors.ejs
+
+---
+id: linux-command-workflow-update-readme-only
+trigger: "when doing update readme only"
+confidence: 0.7
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/linux-command
+---
+
+# Linux Command Workflow Update Readme Only
+
+## Action
+
+Follow the update-readme-only workflow:
+1. Edit README.md
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~4x per month
+- Files: README.md
+
+---
+id: linux-command-workflow-update-contributors-template-only
+trigger: "when doing update contributors template only"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/linux-command
+---
+
+# Linux Command Workflow Update Contributors Template Only
+
+## Action
+
+Follow the update-contributors-template-only workflow:
+1. Edit template/contributors.ejs
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: template/contributors.ejs
+
+---
+id: linux-command-instinct-file-naming
+trigger: "When creating a new file (TypeScript source or documentation)"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: wwj-git-rgb/linux-command
+---
+
+# Linux Command Instinct File Naming
+
+## Action
+
+Name the file using camelCase (e.g., myCommand.md, myScript.ts)
+
+## Evidence
+
+- Pattern in namingConventions.files: camelCase
+- Files in command/ use camelCase (e.g., ufw.md, nstat.md)
+
+---
+id: linux-command-instinct-function-naming
+trigger: "When defining a new function"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: wwj-git-rgb/linux-command
+---
+
+# Linux Command Instinct Function Naming
+
+## Action
+
+Name the function using camelCase (e.g., getCommandList)
+
+## Evidence
+
+- Pattern in namingConventions.functions: camelCase
+
+---
+id: linux-command-instinct-class-naming
+trigger: "When defining a new class"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: wwj-git-rgb/linux-command
+---
+
+# Linux Command Instinct Class Naming
+
+## Action
+
+Name the class using PascalCase (e.g., CommandParser)
+
+## Evidence
+
+- Pattern in namingConventions.classes: PascalCase
+
+---
+id: linux-command-instinct-constant-naming
+trigger: "When defining a constant"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: wwj-git-rgb/linux-command
+---
+
+# Linux Command Instinct Constant Naming
+
+## Action
+
+Name the constant using SCREAMING_SNAKE_CASE (e.g., DEFAULT_PATH)
+
+## Evidence
+
+- Pattern in namingConventions.constants: SCREAMING_SNAKE_CASE
+
+---
+id: linux-command-instinct-relative-imports
+trigger: "When importing modules within the project"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: wwj-git-rgb/linux-command
+---
+
+# Linux Command Instinct Relative Imports
+
+## Action
+
+Use relative import paths (e.g., import x from '../utils')
+
+## Evidence
+
+- Pattern in importStyle: relative
+
+---
+id: linux-command-instinct-named-exports
+trigger: "When exporting functions, classes, or constants"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: wwj-git-rgb/linux-command
+---
+
+# Linux Command Instinct Named Exports
+
+## Action
+
+Use named exports (e.g., export { myFunction })
+
+## Evidence
+
+- Pattern in exportStyle: named
+
+---
+id: linux-command-instinct-test-location
+trigger: "When adding or updating tests"
+confidence: 0.7
+domain: testing
+source: repo-analysis
+source_repo: wwj-git-rgb/linux-command
+---
+
+# Linux Command Instinct Test Location
+
+## Action
+
+Place test files in a separate test directory, not alongside source files
+
+## Evidence
+
+- architecture.folderStructure.testLocation: separate
+
+---
+id: linux-command-instinct-commit-prefix
+trigger: "When writing a commit message"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: wwj-git-rgb/linux-command
+---
+
+# Linux Command Instinct Commit Prefix
+
+## Action
+
+Start the commit message with a lowercase prefix followed by a colon (e.g., doc:, feat:, ci:, website:)
+
+## Evidence
+
+- Commits: 'doc: Update README.md (#631)', 'feat: add getcap. fix #644', 'ci: remove .github/workflows/sync.yml #554', 'website: update contributors.'
+
+---
+id: linux-command-instinct-commit-length
+trigger: "When writing a commit message"
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: wwj-git-rgb/linux-command
+---
+
+# Linux Command Instinct Commit Length
+
+## Action
+
+Keep the commit message concise, typically under 30 characters for the summary line
+
+## Evidence
+
+- commits.averageLength: 29
+
+---
+id: linux-command-instinct-add-or-update-command-doc
+trigger: "When someone wants to add documentation for a new command or update an existing command's documentation"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: wwj-git-rgb/linux-command
+---
+
+# Linux Command Instinct Add Or Update Command Doc
+
+## Action
+
+Create or update a markdown file in command/ and update README.md to mention the new or updated command
+
+## Evidence
+
+- Workflow: add-or-update-command-doc
+- Commits: 'faet: add ufw.md (#636)', 'Add nstat.md and updata Readme.md (#632)'
+
+---
+id: linux-command-instinct-update-readme-and-contributors
+trigger: "When someone wants to update project metadata, acknowledge contributors, or reflect new changes in documentation"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: wwj-git-rgb/linux-command
+---
+
+# Linux Command Instinct Update Readme And Contributors
+
+## Action
+
+Edit README.md and template/contributors.ejs
+
+## Evidence
+
+- Workflow: update-readme-and-contributors
+- Commits: 'doc: update template/contributors.ejs.', 'doc: Update README.md (#631)'
+
+---
+id: linux-command-instinct-update-readme-only
+trigger: "When someone wants to make a minor documentation update or fix in the README.md"
+confidence: 0.99
+domain: workflow
+source: repo-analysis
+source_repo: wwj-git-rgb/linux-command
+---
+
+# Linux Command Instinct Update Readme Only
+
+## Action
+
+Edit README.md only
+
+## Evidence
+
+- Workflow: update-readme-only
+- Commits: 'doc: update README.md.'
+
+---
+id: linux-command-instinct-update-contributors-template-only
+trigger: "When someone wants to update the contributors list or page layout without touching other files"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: wwj-git-rgb/linux-command
+---
+
+# Linux Command Instinct Update Contributors Template Only
+
+## Action
+
+Edit template/contributors.ejs only
+
+## Evidence
+
+- Workflow: update-contributors-template-only
+- Commits: 'doc: update template/contributors.ejs.'
+

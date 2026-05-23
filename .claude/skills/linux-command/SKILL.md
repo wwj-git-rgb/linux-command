@@ -1,0 +1,240 @@
+---
+name: linux-command-conventions
+description: Development conventions and patterns for linux-command. TypeScript project with freeform commits.
+---
+
+# Linux Command Conventions
+
+> Generated from [wwj-git-rgb/linux-command](https://github.com/wwj-git-rgb/linux-command) on 2026-05-23
+
+## Overview
+
+This skill teaches Claude the development patterns and conventions used in linux-command.
+
+## Tech Stack
+
+- **Primary Language**: TypeScript
+- **Architecture**: hybrid module organization
+- **Test Location**: separate
+
+## When to Use This Skill
+
+Activate this skill when:
+- Making changes to this repository
+- Adding new features following established patterns
+- Writing tests that match project conventions
+- Creating commits with proper message format
+
+## Commit Conventions
+
+Follow these commit message conventions based on 100 analyzed commits.
+
+### Commit Style: Free-form Messages
+
+### Prefixes Used
+
+- `doc`
+- `feat`
+
+### Message Guidelines
+
+- Average message length: ~29 characters
+- Keep first line concise and descriptive
+- Use imperative mood ("Add feature" not "Added feature")
+
+
+*Commit message example*
+
+```text
+doc: Update README.md (#631)
+```
+
+*Commit message example*
+
+```text
+faet: add ufw.md (#636)
+```
+
+*Commit message example*
+
+```text
+feat: add getcap. fix #644
+```
+
+*Commit message example*
+
+```text
+ci: remove .github/workflows/sync.yml #554
+```
+
+*Commit message example*
+
+```text
+website: update contributors.
+```
+
+*Commit message example*
+
+```text
+doc: update README.md.
+```
+
+*Commit message example*
+
+```text
+doc: update template/contributors.ejs.
+```
+
+*Commit message example*
+
+```text
+Add nstat.md and updata Readme.md (#632)
+```
+
+## Architecture
+
+### Project Structure: Single Package
+
+This project uses **hybrid** module organization.
+
+### Configuration Files
+
+- `.github/workflows/ci.yml`
+- `.github/workflows/sync.yml`
+- `package.json`
+
+### Guidelines
+
+- This project uses a hybrid organization
+- Follow existing patterns when adding new code
+
+## Code Style
+
+### Language: TypeScript
+
+### Naming Conventions
+
+| Element | Convention |
+|---------|------------|
+| Files | camelCase |
+| Functions | camelCase |
+| Classes | PascalCase |
+| Constants | SCREAMING_SNAKE_CASE |
+
+### Import Style: Relative Imports
+
+### Export Style: Named Exports
+
+
+*Preferred import style*
+
+```typescript
+// Use relative imports
+import { Button } from '../components/Button'
+import { useAuth } from './hooks/useAuth'
+```
+
+*Preferred export style*
+
+```typescript
+// Use named exports
+export function calculateTotal() { ... }
+export const TAX_RATE = 0.1
+export interface Order { ... }
+```
+
+## Common Workflows
+
+These workflows were detected from analyzing commit patterns.
+
+### Add Or Update Command Doc
+
+Adds a new Linux command documentation file or updates an existing one, and updates the README.md to reflect the change.
+
+**Frequency**: ~2 times per month
+
+**Steps**:
+1. Create or update a markdown file in command/ (e.g., command/ufw.md, command/nstat.md, command/vi.md, command/pacman.md, command/losetup.md, command/atop.md, command/git.md, command/getcap.md)
+2. Update README.md to mention the new or updated command
+
+**Files typically involved**:
+- `command/*.md`
+- `README.md`
+
+**Example commit sequence**:
+```
+Create or update a markdown file in command/ (e.g., command/ufw.md, command/nstat.md, command/vi.md, command/pacman.md, command/losetup.md, command/atop.md, command/git.md, command/getcap.md)
+Update README.md to mention the new or updated command
+```
+
+### Update Readme And Contributors
+
+Updates the README.md and the contributors page/template, often to add new contributors or update project metadata.
+
+**Frequency**: ~2 times per month
+
+**Steps**:
+1. Edit README.md
+2. Edit template/contributors.ejs
+
+**Files typically involved**:
+- `README.md`
+- `template/contributors.ejs`
+
+**Example commit sequence**:
+```
+Edit README.md
+Edit template/contributors.ejs
+```
+
+### Update Readme Only
+
+Updates only the README.md file, typically for minor documentation changes, resource links, or metadata.
+
+**Frequency**: ~4 times per month
+
+**Steps**:
+1. Edit README.md
+
+**Files typically involved**:
+- `README.md`
+
+**Example commit sequence**:
+```
+Edit README.md
+```
+
+### Update Contributors Template Only
+
+Updates only the contributors template file, often to reflect new contributors or adjust the contributors page layout.
+
+**Frequency**: ~2 times per month
+
+**Steps**:
+1. Edit template/contributors.ejs
+
+**Files typically involved**:
+- `template/contributors.ejs`
+
+**Example commit sequence**:
+```
+Edit template/contributors.ejs
+```
+
+
+## Best Practices
+
+Based on analysis of the codebase, follow these practices:
+
+### Do
+
+- Use camelCase for file names
+- Prefer named exports
+
+### Don't
+
+- Don't deviate from established patterns without discussion
+
+---
+
+*This skill was auto-generated by [ECC Tools](https://ecc.tools). Review and customize as needed for your team.*

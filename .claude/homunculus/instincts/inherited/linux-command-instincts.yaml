@@ -1,0 +1,196 @@
+# Instincts generated from https://github.com/wwj-git-rgb/linux-command
+# Generated: 2026-05-23T20:24:20.076Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: linux-command-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/linux-command
+---
+
+# Linux Command Commit Length
+
+## Action
+
+Keep commit messages concise (~29 characters)
+
+## Evidence
+
+- Average commit message length: 29 chars
+- Based on 100 commits
+
+---
+id: linux-command-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/linux-command
+---
+
+# Linux Command Naming Files
+
+## Action
+
+Use camelCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: camelCase
+
+---
+id: linux-command-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/linux-command
+---
+
+# Linux Command Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: linux-command-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/linux-command
+---
+
+# Linux Command Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: linux-command-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/linux-command
+---
+
+# Linux Command Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: linux-command-workflow-add-or-update-command-doc
+trigger: "when doing add or update command doc"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/linux-command
+---
+
+# Linux Command Workflow Add Or Update Command Doc
+
+## Action
+
+Follow the add-or-update-command-doc workflow:
+1. Create or update a markdown file in command/ (e.g., command/ufw.md, command/nstat.md, command/vi.md, command/pacman.md, command/losetup.md, command/atop.md, command/git.md, command/getcap.md)
+2. Update README.md to mention the new or updated command
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: command/*.md, README.md
+
+---
+id: linux-command-workflow-update-readme-and-contributors
+trigger: "when doing update readme and contributors"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/linux-command
+---
+
+# Linux Command Workflow Update Readme And Contributors
+
+## Action
+
+Follow the update-readme-and-contributors workflow:
+1. Edit README.md
+2. Edit template/contributors.ejs
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: README.md, template/contributors.ejs
+
+---
+id: linux-command-workflow-update-readme-only
+trigger: "when doing update readme only"
+confidence: 0.7
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/linux-command
+---
+
+# Linux Command Workflow Update Readme Only
+
+## Action
+
+Follow the update-readme-only workflow:
+1. Edit README.md
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~4x per month
+- Files: README.md
+
+---
+id: linux-command-workflow-update-contributors-template-only
+trigger: "when doing update contributors template only"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/linux-command
+---
+
+# Linux Command Workflow Update Contributors Template Only
+
+## Action
+
+Follow the update-contributors-template-only workflow:
+1. Edit template/contributors.ejs
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: template/contributors.ejs
+
